@@ -18,7 +18,7 @@ Wav2vec 2.0 learns speech representations on unlabeled data as described in [wav
 
 ### ASR checkpoints
 
-We provide several Wav2vec finetuned models for ASR. For a more detailed description of how we finetuned these models, please check the paper ´[Brazilian Portuguese Speech Recognition Using Wav2vec 2.0](https://arxiv.org/abs/2107.11414).
+We provide several Wav2vec finetuned models for ASR. For a more detailed description of how we finetuned these models, please check the paper [Brazilian Portuguese Speech Recognition Using Wav2vec 2.0](https://arxiv.org/abs/2107.11414).
 
 Our last model is the bp\_400. It was finetuned using the 400h filtered version of the BP Dataset (see [Brazilian Portuguese (BP) Dataset Version 1](#Brazilian-Portuguese-(BP)-Dataset-Version-1) below). The results against each gathered dataset is shown below.
 
@@ -134,7 +134,7 @@ python scripts/join_datasets.py /path/to/dataset1/train /path/to/dataset2/train 
 After joining datasets, you might have some degree of transcription contamination. To remove all transcriptions present in a specific subset (for example, test subset), you can use the filter_dataset script:
 
 ```
-python scripts/mls.py /path/to/my_dataset/train /path/to/dataset1/test /path/to/dataset2/test -output-dir data/my_dataset --output-name my_filtered_train
+python scripts/filter_datasets.py /path/to/my_dataset/train /path/to/dataset1/test /path/to/dataset2/test -output-dir data/my_dataset --output-name my_filtered_train
 ```
 
 Alternativelly, download the raw datasets using the links below:
