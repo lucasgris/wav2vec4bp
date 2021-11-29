@@ -1,26 +1,26 @@
 # Wav2vec 2.0 for Brazilian Portuguese :brazil:
 
-> This repository aims the development of audio technologies using Wav2vec 2.0, such as Automatic Speech Recognition (ASR), for the Brazilian Portuguese language. 
+> This repository aims at the development of audio technologies using Wav2vec 2.0, such as Automatic Speech Recognition (ASR), for the Brazilian Portuguese language. 
 
 ## Description 
 
-This repository contains code and finetuned Wav2vec checkpoints for Brazilian Portuguese, including some useful scripts to download and preprocess transcribed data. 
+This repository contains code and fine-tuned Wav2vec checkpoints for Brazilian Portuguese, including some useful scripts to download and preprocess transcribed data. 
 
 Wav2vec 2.0 learns speech representations on unlabeled data as described in [wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations (Baevski et al., 2020)](https://arxiv.org/abs/2006.11477). For more information about Wav2vec, please access the [official repository](https://github.com/pytorch/fairseq/tree/main/examples/wav2vec).
 
 ## Tasks
 
 - [ ] Add [CORAA](https://github.com/nilc-nlp/CORAA) to the BP Dataset (BP Dataset Version 2);
-- [ ] Release BP Dataset V2 finetuned models;
+- [ ] Release BP Dataset V2 fine tuned models;
 - [ ] Finetune using the XLR-S 300M, XLR-S 1B and XLR-S 2B models.
 
 ## Checkpoints
 
 ### ASR checkpoints
 
-We provide several Wav2vec finetuned models for ASR. For a more detailed description of how we finetuned these models, please check the paper [Brazilian Portuguese Speech Recognition Using Wav2vec 2.0](https://arxiv.org/abs/2107.11414).
+We provide several Wav2vec fine-tuned models for ASR. For a more detailed description of how we finetuned these models, please check the paper [Brazilian Portuguese Speech Recognition Using Wav2vec 2.0](https://arxiv.org/abs/2107.11414).
 
-Our last model is the bp\_400. It was finetuned using the 400h filtered version of the BP Dataset (see [Brazilian Portuguese (BP) Dataset Version 1](#Brazilian-Portuguese-(BP)-Dataset-Version-1) below). The results against each gathered dataset is shown below.
+Our last model is the bp\_400. It was finetuned using the 400h filtered version of the BP Dataset (see [Brazilian Portuguese (BP) Dataset Version 1](#Brazilian-Portuguese-(BP)-Dataset-Version-1) below). The results against each gathered dataset are shown below.
 
 #### Checkpoints of BP Dataset V1
 
@@ -28,7 +28,7 @@ Our last model is the bp\_400. It was finetuned using the 400h filtered version 
 |-------------------|------------------|---------------|----------|-------------------|
 | bp\_400           | XLSR-53          | [fairseq](https://drive.google.com/file/d/1AUqILVOLxcHzk7mu7YqtjBYkppni9Lgc/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1J7hkjJjSoHNXUPO7A3O5XGCUnBTj7h9p/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp400-xlsr)  |
 
-#### Checkpoints of non filtered BP Dataset (early version of the BP dataset)
+#### Checkpoints of non-filtered BP Dataset (early version of the BP dataset)
 
 | Model name        | Pretrained model | Fairseq model | Dict     | Hugging Face link |
 |-------------------|------------------|---------------|----------|-------------------|
@@ -80,7 +80,7 @@ We provide other Wav2vec checkpoints. These models were trained using all the av
 
 \* We found a problem with the dataset used in these experiments regarding the VoxForge subset. In this test set, some speakers were also present in the training set (which explains the lower WER). The final version of the dataset does not have such contamination.
 
-\** We do not performed validation in the subset experiments. CETUC has a poor variety of transcriptions. It might be overfitted.
+\** We do not perform validation in the subset experiments. CETUC has a poor variety of transcriptions. It might be overfitted.
 
 ##### Transcription examples
 
@@ -99,14 +99,14 @@ We provide other Wav2vec checkpoints. These models were trained using all the av
 Datasets provided:
 
 - [CETUC](http://www02.smt.ufrj.br/~igor.quintanilha/alcaim.tar.gz): contains approximately 145 hours of Brazilian Portuguese speech distributed among 50 male and 50 female speakers, each pronouncing approximately 1,000 phonetically balanced sentences selected from the [CETEN-Folha](https://www.linguateca.pt/cetenfolha/) corpus.
-- [Common Voice 7.0](https://commonvoice.mozilla.org/pt):  is a project proposed by Mozilla Foundation with the goal to create a wide open dataset in different languages. In this project, volunteers donate and validate speech using the [oficial site](https://commonvoice.mozilla.org/pt). 
-- [Lapsbm](https://github.com/falabrasil/gitlab-resources): "Falabrasil - UFPA" is a dataset used by the Fala Brasil group to benchmark ASR systems in Brazilian Portuguese. Contains 35 speakers (10 females), each one pronouncing 20 unique sentences, totalling  700 utterances in Brazilian Portuguese. The audios were recorded in 22.05 kHz without environment control.
-- [Multilingual Librispeech (MLS)](https://arxiv.org/abs/2012.03411): a massive dataset available in many languages. The MLS is based on audiobook recordings in public domain like [LibriVox](https://librivox.org/). The dataset contains a total of 6k hours of transcribed data in many languages. The set in Portuguese [used in this work](http://www.openslr.org/94/) (mostly Brazilian variant) has approximately 284 hours of speech, obtained from 55 audiobooks read by 62 speakers.
+- [Common Voice 7.0](https://commonvoice.mozilla.org/pt):  is a project proposed by Mozilla Foundation with the goal to create a wide-open dataset in different languages. In this project, volunteers donate and validate speech using the [oficial site](https://commonvoice.mozilla.org/pt). 
+- [Lapsbm](https://github.com/falabrasil/gitlab-resources): "Falabrasil - UFPA" is a dataset used by the Fala Brasil group to benchmark ASR systems in Brazilian Portuguese. Contains 35 speakers (10 females), each one pronouncing 20 unique sentences, totaling 700 utterances in Brazilian Portuguese. The audios were recorded in 22.05 kHz without environment control.
+- [Multilingual Librispeech (MLS)](https://arxiv.org/abs/2012.03411): a massive dataset available in many languages. The MLS is based on audiobook recordings in the public domain like [LibriVox](https://librivox.org/). The dataset contains a total of 6k hours of transcribed data in many languages. The set in Portuguese [used in this work](http://www.openslr.org/94/) (mostly Brazilian variant) has approximately 284 hours of speech, obtained from 55 audiobooks read by 62 speakers.
 - [Multilingual TEDx](http://www.openslr.org/100): a collection of audio recordings from TEDx talks in 8 source languages. The Portuguese set (mostly Brazilian Portuguese variant) contains 164 hours of transcribed speech. 
 - [Sidney](https://igormq.github.io/datasets/) (SID): contains 5,777 utterances recorded by 72 speakers (20 women) from 17 to 59 years old with fields such as place of birth, age, gender, education, and occupation;
 - [VoxForge](http://www.voxforge.org/): is a project with the goal to build open datasets for acoustic models. The corpus contains approximately 100 speakers and 4,130 utterances of Brazilian Portuguese, with sample rates varying from 16kHz to 44.1kHz.
 
-These datasets were combined to build a larger Brazilian Portuguese dataset (BP Dataset). All data was used for training except Common Voice dev/test sets, that were used for validation/test respectively. We also made test sets for all the gathered datasets.
+These datasets were combined to build a larger Brazilian Portuguese dataset (BP Dataset). All data was used for training except Common Voice dev/test sets, which were used for validation/test respectively. We also made test sets for all the gathered datasets.
 
 | Dataset                        |  Train | Valid |  Test |
 |--------------------------------|-------:|------:|------:|
@@ -146,13 +146,13 @@ Alternativelly, download the raw datasets using the links below:
 
 ### Brazilian Portuguese (BP) Dataset Version 1
 
-The BP Dataset is an assembled dataset composed of many others in Brazilian Portuguese. We used the original test sets of each gathered dataset to make individual test sets. For the datasets without test sets, we created them by selecting 5% of unique male and female speakers. Additionally, we performed some filtering removing all transcriptions of the test sets from the final training set. We also ignored audio more than 30 seconds length from the dataset. 
+The BP Dataset is an assembled dataset composed of many others in Brazilian Portuguese. We used the original test sets of each gathered dataset to make individual test sets. For the datasets without test sets, we created them by selecting 5% of unique male and female speakers. Additionally, we performed some filtering removing all transcriptions of the test sets from the final training set. We also ignored audio more than 30 seconds long from the dataset. 
 
 If you run the provided scripts, you might generate a slightly different version of the BP dataset. If you want to use the same files used to train, validate and test our models, you can download the metadata [here](https://drive.google.com/drive/folders/1N_LHtbupQgpIoEobss4ZNw8azHcvn7Zq?usp=sharing).
 
 #### Other versions
 
-Our first attempt to build a larger dataset for BP produced an 500 hours dataset. However, we found some problem with the VoxForge subset. We also found some transcriptions of the test sets present in the training set. We made available the models trained with this version of the dataset (bp_500).
+Our first attempt to build a larger dataset for BP produced a 500 hours dataset. However, we found some problems with the VoxForge subset. We also found some transcriptions of the test sets present in the training set. We made available the models trained with this version of the dataset (bp_500).
 
 ### Language models
 
@@ -192,7 +192,7 @@ cd fairseq
 pip install -e .
 ```
 
-2. Download a pretrained model (See [pretrained models](#Pretrained-models))
+2. Download a pre-trained model (See [pretrained models](#Pretrained-models))
 
 2. Create or use a configuration file (see configs/ directory). 
 
@@ -211,7 +211,7 @@ fairseq-hydra-train \
 
 ### Pretrained models
 
-To finetune Wav2vec, you will need to download a pretrained model first.
+To fine-tune Wav2vec, you will need to download a pre-trained model first.
 
 - [XLSR-53 (large) (recommended)](https://dl.fbaipublicfiles.com/fairseq/wav2vec/xlsr_53_56k.pt)
 - [VoxPopuli 10k (base)](https://dl.fbaipublicfiles.com/voxpopuli/models/wav2vec2_base_10k.pt)
@@ -282,4 +282,5 @@ fairseq-train --task language_modeling \
 
 ## Docker
 
-We recommend to use a docker container, such as [flml/flashlight](https://hub.docker.com/r/flml/flashlight/tags), to easily finetune and test your models.
+We recommend using a docker container, such as [flml/flashlight](https://hub.docker.com/r/flml/flashlight/tags), to easily finetune and test your models.
+
