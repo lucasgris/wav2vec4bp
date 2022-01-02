@@ -38,16 +38,16 @@ Our last model is the bp\_400. It was finetuned using the 400h filtered version 
 
 #### Checkpoints of each gathered dataset
 
-| Model name        | Pretrained model | Fairseq model | Dict     | Hugging Face link |
-|-------------------|------------------|---------------|----------|-------------------|
-| cetuc\_100        | XLSR-53          | [fairseq](https://drive.google.com/file/d/13gR-LdJ5lP9lRst587apZ47hD_xPM2Xg/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1Wv0UgkUF1s_sDJ0qjjptUorZKdWgnSfW/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/cetuc100-xlsr)  |
-| commonvoice\_100  | XLSR-53          | [fairseq](https://drive.google.com/file/d/1rX6lGz6rcVtlRjygzRNGuy2Q2jkVdMXS/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1HemD4eOivY1SHvQ1D7YPlOciiwcInoU6/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/commonvoice100-xlsr)  |
-| commonvoice\_10   | XLSR-53          | [fairseq](https://drive.google.com/file/d/1N2cCvYeEm5xqRj1oylqBX1T7tYNMzk7R/view?usp=sharing)   | [dict](https://drive.google.com/file/d/11DnZ5EBxs79Z-_0XeKyCSHAGVt8gq4MG/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/commonvoice10-xlsr)  |
-| lapsbm\_1         | XLSR-53          | [fairseq](https://drive.google.com/file/d/1tjKhS-mdDoW8q_lsxWQiIY0xDbRXk9JX/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1BRBqOiJIlXrvAb5_p5Pz_HQdHfX0TCyV/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/lapsbm1-xlsr)  |
-| mls\_100          | XLSR-53          | [fairseq](https://drive.google.com/file/d/1HY5LLere94SFhX9-YF0dZeuL-XGfothS/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1dd1Jl6OEnsxjwOhbnM6oXWeD7PevWEoT/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/mls100-xlsr)  |
-| sid\_10           | XLSR-53          | [fairseq](https://drive.google.com/file/d/1gFCZSZI4iXYVUBIn058ITVU4V1yHyfIE/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1qHgW9WXE-hTGiVQeLVKv0kKs-63j2Pui/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/sid10-xlsr)  |
-| tedx\_100         | XLSR-53          | [fairseq](https://drive.google.com/file/d/1m3nZTj87NzK-XXBrjJQiOsgwYQeVi_O0/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1UvNwWIsd2Z11LPylh6C-IKSwNf73z7OF/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/tedx100-xlsr)  |
-| voxforge\_1       | XLSR-53          | [fairseq](https://drive.google.com/file/d/16T-NuY00xcudixfPv8k5A7fBaAQhIQ3D/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1ZIPguXhdlGPqiV3NAF4Bc7dkh5NH3U38/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/voxforge1-xlsr)  |
+| Model name            | Pretrained model | Fairseq model | Dict     | Hugging Face link |
+|-----------------------|------------------|---------------|----------|-------------------|
+| bp\_cetuc\_100        | XLSR-53          | [fairseq](https://drive.google.com/file/d/13gR-LdJ5lP9lRst587apZ47hD_xPM2Xg/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1Wv0UgkUF1s_sDJ0qjjptUorZKdWgnSfW/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-cetuc100-xlsr)  |
+| bp\_commonvoice\_100  | XLSR-53          | [fairseq](https://drive.google.com/file/d/1rX6lGz6rcVtlRjygzRNGuy2Q2jkVdMXS/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1HemD4eOivY1SHvQ1D7YPlOciiwcInoU6/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-commonvoice100-xlsr)  |
+| bp\_commonvoice\_10   | XLSR-53          | [fairseq](https://drive.google.com/file/d/1N2cCvYeEm5xqRj1oylqBX1T7tYNMzk7R/view?usp=sharing)   | [dict](https://drive.google.com/file/d/11DnZ5EBxs79Z-_0XeKyCSHAGVt8gq4MG/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-commonvoice10-xlsr)  |
+| bp\_lapsbm\_1         | XLSR-53          | [fairseq](https://drive.google.com/file/d/1tjKhS-mdDoW8q_lsxWQiIY0xDbRXk9JX/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1BRBqOiJIlXrvAb5_p5Pz_HQdHfX0TCyV/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-lapsbm1-xlsr)  |
+| bp\_mls\_100          | XLSR-53          | [fairseq](https://drive.google.com/file/d/1HY5LLere94SFhX9-YF0dZeuL-XGfothS/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1dd1Jl6OEnsxjwOhbnM6oXWeD7PevWEoT/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-mls100-xlsr)  |
+| bp\_sid\_10           | XLSR-53          | [fairseq](https://drive.google.com/file/d/1gFCZSZI4iXYVUBIn058ITVU4V1yHyfIE/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1qHgW9WXE-hTGiVQeLVKv0kKs-63j2Pui/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-sid10-xlsr)  |
+| bp\_tedx\_100         | XLSR-53          | [fairseq](https://drive.google.com/file/d/1m3nZTj87NzK-XXBrjJQiOsgwYQeVi_O0/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1UvNwWIsd2Z11LPylh6C-IKSwNf73z7OF/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-tedx100-xlsr)  |
+| bp\_voxforge\_1       | XLSR-53          | [fairseq](https://drive.google.com/file/d/16T-NuY00xcudixfPv8k5A7fBaAQhIQ3D/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1ZIPguXhdlGPqiV3NAF4Bc7dkh5NH3U38/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-voxforge1-xlsr)  |
 
 #### Other checkpoints 
 
@@ -69,14 +69,14 @@ We provide other Wav2vec checkpoints. These models were trained using all the av
 | bp\_500                        | 0.052 | 0.137 | 0.032 | 0.118 | 0.095 | 0.236 | 0.082*| 0.112 |
 | bp\_500-base10k_voxpopuli      | 0.120 | 0.249 | 0.039 | 0.227 | 0.169 | 0.349 | 0.116*| 0.181 |
 | bp\_500-base100k_voxpopuli     | 0.074 | 0.174 | 0.032 | 0.182 | 0.181 | 0.349 | 0.111*| 0.157 |
-| cetuc\_100**                   | 0.446 | 0.856 | 0.089 | 0.967 | 1.172 | 0.929 | 0.902 | 0.765 | 
-| commonvoice\_100               | 0.088 | 0.126 | 0.121 | 0.173 | 0.177 | 0.424 | 0.145 | 0.179 |
-| commonvoice\_10                | 0.133 | 0.189 | 0.165 | 0.189 | 0.247 | 0.474 | 0.251 | 0.235 | 
-| lapsbm\_1                      | 0.111 | 0.418 | 0.145 | 0.299 | 0.562 | 0.580 | 0.469 | 0.369 |
-| mls\_100                       | 0.192 | 0.260 | 0.162 | 0.163 | 0.268 | 0.492 | 0.268 | 0.257 |
-| sid\_10                        | 0.186 | 0.327 | 0.207 | 0.505 | 0.124 | 0.835 | 0.472 | 0.379 | 
-| tedx\_100                      | 0.138 | 0.369 | 0.169 | 0.165 | 0.794 | 0.222 | 0.395 | 0.321 | 
-| voxforge\_1                    | 0.468 | 0.608 | 0.503 | 0.505 | 0.717 | 0.731 | 0.561 | 0.584 |
+| bp\_cetuc\_100**               | 0.446 | 0.856 | 0.089 | 0.967 | 1.172 | 0.929 | 0.902 | 0.765 | 
+| bp\_commonvoice\_100           | 0.088 | 0.126 | 0.121 | 0.173 | 0.177 | 0.424 | 0.145 | 0.179 |
+| bp\_commonvoice\_10            | 0.133 | 0.189 | 0.165 | 0.189 | 0.247 | 0.474 | 0.251 | 0.235 | 
+| bp\_lapsbm\_1                  | 0.111 | 0.418 | 0.145 | 0.299 | 0.562 | 0.580 | 0.469 | 0.369 |
+| bp\_mls\_100                   | 0.192 | 0.260 | 0.162 | 0.163 | 0.268 | 0.492 | 0.268 | 0.257 |
+| bp\_sid\_10                    | 0.186 | 0.327 | 0.207 | 0.505 | 0.124 | 0.835 | 0.472 | 0.379 | 
+| bp\_tedx\_100                  | 0.138 | 0.369 | 0.169 | 0.165 | 0.794 | 0.222 | 0.395 | 0.321 | 
+| bp\_voxforge\_1                | 0.468 | 0.608 | 0.503 | 0.505 | 0.717 | 0.731 | 0.561 | 0.584 |
 
 \* We found a problem with the dataset used in these experiments regarding the VoxForge subset. In this test set, some speakers were also present in the training set (which explains the lower WER). The final version of the dataset does not have such contamination.
 
