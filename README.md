@@ -1,18 +1,12 @@
-# Wav2vec 2.0 for Brazilian Portuguese :brazil:
+# Brazilian Portuguese Speech Recognition Using Wav2vec 2.0 :brazil:
 
-> This repository aims at the development of audio technologies using Wav2vec 2.0, such as Automatic Speech Recognition (ASR), for the Brazilian Portuguese language. 
+Paper: https://arxiv.org/abs/2107.11414
 
 ## Description 
 
-This repository contains code and fine-tuned Wav2vec checkpoints for Brazilian Portuguese, including some useful scripts to download and preprocess transcribed data. 
+This repository contains code and fine-tuned Wav2vec ASR checkpoints for Brazilian Portuguese, including some useful scripts to download and preprocess transcribed data. 
 
 Wav2vec 2.0 learns speech representations on unlabeled data as described in [wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations (Baevski et al., 2020)](https://arxiv.org/abs/2006.11477). For more information about Wav2vec, please access the [official repository](https://github.com/pytorch/fairseq/tree/main/examples/wav2vec).
-
-## Tasks
-
-- [ ] Add [CORAA](https://github.com/nilc-nlp/CORAA) to the BP Dataset (BP Dataset Version 2);
-- [ ] Release BP Dataset V2 fine tuned models;
-- [ ] Finetune using the XLR-S 300M, XLR-S 1B and XLR-S 2B models.
 
 ## Checkpoints
 
@@ -28,14 +22,6 @@ Our last model is the bp\_400. It was finetuned using the 400h filtered version 
 |-------------------|------------------|---------------|----------|-------------------|
 | bp\_400           | XLSR-53          | [fairseq](https://drive.google.com/file/d/1AUqILVOLxcHzk7mu7YqtjBYkppni9Lgc/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1J7hkjJjSoHNXUPO7A3O5XGCUnBTj7h9p/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp400-xlsr)  |
 
-#### Checkpoints of non-filtered BP Dataset (early version of the BP dataset)
-
-| Model name        | Pretrained model | Fairseq model | Dict     | Hugging Face link |
-|-------------------|------------------|---------------|----------|-------------------|
-| bp\_500           | XLSR-53          | [fairseq](https://drive.google.com/file/d/1J8aR1ltDLQFe-dVrGuyxoRm2uyJjCWgf/view?usp=sharing)   | [dict](https://drive.google.com/file/d/13fLaBgtImYxjnHKpSzyKycHnmSLlPZ2u/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp500-xlsr)  |
-| bp\_500_10k       | VoxPopuli 10k BASE | [fairseq](https://drive.google.com/file/d/19kkENi8uvczmw9OLSdqnjvKqBE53cl_W/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1V2Ke4bACFppWpcEwRdfAZdo4Nnpwjac9/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp500-base10k_voxpopuli)  |
-| bp\_500_100k      | VoxPopuli 100k BASE | [fairseq](https://drive.google.com/file/d/10iESR5AQxuxF5F7w3wLbpc_9YMsYbY9H/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1aWUCAK6f2fpQZCTTkAihsXRUvkgwyqCJ/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp500-base100k_voxpopuli)  |
-
 #### Checkpoints of each gathered dataset
 
 | Model name            | Pretrained model | Fairseq model | Dict     | Hugging Face link |
@@ -49,16 +35,6 @@ Our last model is the bp\_400. It was finetuned using the 400h filtered version 
 | bp\_tedx\_100         | XLSR-53          | [fairseq](https://drive.google.com/file/d/1m3nZTj87NzK-XXBrjJQiOsgwYQeVi_O0/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1UvNwWIsd2Z11LPylh6C-IKSwNf73z7OF/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-tedx100-xlsr)  |
 | bp\_voxforge\_1       | XLSR-53          | [fairseq](https://drive.google.com/file/d/16T-NuY00xcudixfPv8k5A7fBaAQhIQ3D/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1ZIPguXhdlGPqiV3NAF4Bc7dkh5NH3U38/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp-voxforge1-xlsr)  |
 
-#### Other checkpoints 
-
-We provide other Wav2vec checkpoints. These models were trained using all the available data at the time, including its dev and test subsets. Only Common Voice dev/test was selected to validate and test the model, respectively.
-
-| Datasets used for training | Fairseq model | Dict | Hugging Face link |
-|----------------------------|---------------|------|-------------------|
-| CETUC + CV 6.1 (only train) + LaPS BM + MLS + VoxForge | [fairseq](https://drive.google.com/file/d/1wyRzlagentrI5PQvMaIjjm-DhLcIRgAx/view?usp=sharing) | [dict](https://drive.google.com/file/d/1BrFpmgZDc5xuQ7xvNgm4eiepi-7UJLyw/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/wav2vec2-large-xlsr-open-brazilian-portuguese) |
-| CETUC + CV 6.1 (all validated) + LaPS BM + MLS + VoxForge |  | | [hugging face](https://huggingface.co/lgris/wav2vec2-large-xlsr-open-brazilian-portuguese-v2) |
-
-
 #### ASR Results
 
 ##### Summary (WER)
@@ -66,9 +42,6 @@ We provide other Wav2vec checkpoints. These models were trained using all the av
 | Model                          | CETUC | CV    | LaPS  | MLS   | SID   | TEDx  | VF    | AVG   |
 |--------------------------------|-------|-------|-------|-------|-------|-------|-------|-------|
 | __bp\_400__                    | 0.052 | 0.140 | 0.074 | 0.117 | 0.121 | 0.245 | 0.118 | 0.124 |
-| bp\_500                        | 0.052 | 0.137 | 0.032 | 0.118 | 0.095 | 0.236 | 0.082*| 0.112 |
-| bp\_500-base10k_voxpopuli      | 0.120 | 0.249 | 0.039 | 0.227 | 0.169 | 0.349 | 0.116*| 0.181 |
-| bp\_500-base100k_voxpopuli     | 0.074 | 0.174 | 0.032 | 0.182 | 0.181 | 0.349 | 0.111*| 0.157 |
 | bp\_cetuc\_100**               | 0.446 | 0.856 | 0.089 | 0.967 | 1.172 | 0.929 | 0.902 | 0.765 | 
 | bp\_commonvoice\_100           | 0.088 | 0.126 | 0.121 | 0.173 | 0.177 | 0.424 | 0.145 | 0.179 |
 | bp\_commonvoice\_10            | 0.133 | 0.189 | 0.165 | 0.189 | 0.247 | 0.474 | 0.251 | 0.235 | 
@@ -77,10 +50,6 @@ We provide other Wav2vec checkpoints. These models were trained using all the av
 | bp\_sid\_10                    | 0.186 | 0.327 | 0.207 | 0.505 | 0.124 | 0.835 | 0.472 | 0.379 | 
 | bp\_tedx\_100                  | 0.138 | 0.369 | 0.169 | 0.165 | 0.794 | 0.222 | 0.395 | 0.321 | 
 | bp\_voxforge\_1                | 0.468 | 0.608 | 0.503 | 0.505 | 0.717 | 0.731 | 0.561 | 0.584 |
-
-\* We found a problem with the dataset used in these experiments regarding the VoxForge subset. In this test set, some speakers were also present in the training set (which explains the lower WER). The final version of the dataset does not have such contamination.
-
-\** We do not perform validation in the subset experiments. CETUC has a poor variety of transcriptions. It might be overfitted.
 
 ##### Transcription examples
 
@@ -175,112 +144,3 @@ You can download some Ken LM models [here](https://github.com/igormq/speech2text
 
 - [Wikipedia](https://drive.google.com/file/d/13xUf4OLW2l6FDe9oqN-4HW3P_XfkCEWk/view?usp=sharing)
 - [BP Dataset](https://drive.google.com/file/d/1_luSxSClE9L5wvCGM_wLJtZJpD_9dWr8/view?usp=sharing)
-
-#### 🤗 Hugging Face Transformers + Wav2Vec2_PyCTCDecode 
-
-If you want to use [Wav2Vec2_PyCTCDecode](https://github.com/patrickvonplaten/Wav2Vec2_PyCTCDecode) with Transformers to decode the Hugging Face models, the Ken LM models provided above might not work. In this case, you should train your own following the instructions [here](https://github.com/patrickvonplaten/Wav2Vec2_PyCTCDecode), or use one of the two models trained with BP Dataset and Wikipedia below:
-
-- [BP KenLM 4-gram](https://drive.google.com/file/d/1dLFldy7eguPtyJj5OAlI4Emnx0BpFywg/view?usp=sharing)
-- [Wikipedia KenLM 4-gram](https://drive.google.com/file/d/1GJIKseP5ZkTbllQVgOL98R4yYAcIySFP/view?usp=sharing)
-
-## ASR finetune
-
-1. To finetune the model, first install [fairseq](https://github.com/pytorch/fairseq) and its dependencies.
-
-```
-cd fairseq
-pip install -e .
-```
-
-2. Download a pre-trained model (See [pretrained models](#Pretrained-models))
-
-2. Create or use a configuration file (see configs/ directory). 
-
-3. Finetune the model executing fairseq-hydra-train
-
-```
-root=/path/to/wav2vec4bp
-fairseq-hydra-train \
-   task.data=$root/data/my_dataset \
-   checkpoint.save_dir=$root/checkpoints/stt/my_model_name \
-   model.w2v_path=$root/xlsr_53_56k.pt \
-   common.tensorboard_logdir=$root/logs/stt/my_model_name \
-   --config-dir $root/configs \
-   --config-name my_configuration_file_name
-```
-
-### Pretrained models
-
-To fine-tune Wav2vec, you will need to download a pre-trained model first.
-
-- [XLSR-53 (large) (recommended)](https://dl.fbaipublicfiles.com/fairseq/wav2vec/xlsr_53_56k.pt)
-- [VoxPopuli 10k (base)](https://dl.fbaipublicfiles.com/voxpopuli/models/wav2vec2_base_10k.pt)
-- [VoxPopuli 10k (large)](https://dl.fbaipublicfiles.com/voxpopuli/models/wav2vec2_large_10k.pt)
-- [VoxPopuli 100k (base)](https://dl.fbaipublicfiles.com/voxpopuli/models/wav2vec2_base_100k.pt)
-- [VoxPopuli 100k (large)](https://dl.fbaipublicfiles.com/voxpopuli/models/wav2vec2_large_100k.pt)
-- [XLR-S 300M](https://dl.fbaipublicfiles.com/fairseq/wav2vec/xlsr2_300m.pt)
-- [XLR-S 1B](https://dl.fbaipublicfiles.com/fairseq/wav2vec/xlsr2_960m_1000k.pt)
-- [XLR-S 2B](https://dl.fbaipublicfiles.com/fairseq/wav2vec/xlsr2_2B_1000k.pt)
-
-## 🤗 ASR finetune with HuggingFace
-
-To easily finetune the model using hugging face, you can use the repository [Wav2vec-wrapper](https://github.com/Edresson/Wav2Vec-Wrapper).
-
-## Language model training
-
-To train a language model, one can use a Transformer LM or KenLM.
-
-### Ken LM
-
-First, install [KenLM](https://github.com/kpu/kenlm). 
-
-```
-git clone https://github.com/kpu/kenlm.git
-cd kenlm
-mkdir -p build
-cd build
-cmake ..
-make -j 4
-```
-
-Then create a text file and run the following command:
-
-```
-./kenlm/build/bin/lmplz -o 5 <text.txt > path_to_lm.arpa
-```
-
-### Transformer LM
-
-To train a [Transformer LM](https://github.com/pytorch/fairseq/tree/main/examples/language_model), first prepare and preprocess train, valid and test text files:
-
-```
-TEXT=path/to/dataset
-fairseq-preprocess \
-    --only-source \
-    --trainpref $TEXT/train.tokens \
-    --validpref $TEXT/valid.tokens \
-    --testpref $TEXT/test.tokens \
-    --destdir data/text/$dataset \
-    --workers 20
-```
-
-Then train the model:
-
-```
-fairseq-train --task language_modeling \
-  data/text/$dataset \
-  --save-dir checkpoints/transformer_lms/$name \
-  --arch transformer_lm --share-decoder-input-output-embed \
-  --dropout 0.1 \
-  --optimizer adam --adam-betas '(0.9, 0.98)' --weight-decay 0.01 --clip-norm 0.0 \
-  --lr 0.0005 --lr-scheduler inverse_sqrt --warmup-updates 4000 --warmup-init-lr 1e-07 \
-  --tokens-per-sample 512 --sample-break-mode none \
-  --max-tokens 1024 --update-freq 32 \
-  --fp16 \
-  --max-update 50000
-```
-
-## Docker
-
-We recommend using a docker container, such as [flml/flashlight](https://hub.docker.com/r/flml/flashlight/tags), to easily finetune and test your models.
-
