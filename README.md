@@ -27,6 +27,7 @@ Our last model is the bp\_400. It was finetuned using the 400h filtered version 
 | Model name        | Pretrained model | Fairseq model | Dict     | Hugging Face link |
 |-------------------|------------------|---------------|----------|-------------------|
 | bp\_400           | XLSR-53          | [fairseq](https://drive.google.com/file/d/1AUqILVOLxcHzk7mu7YqtjBYkppni9Lgc/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1J7hkjJjSoHNXUPO7A3O5XGCUnBTj7h9p/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp400-xlsr)  |
+| bp\_400_xls-r-300M| XLS-R-300M       | [fairseq](https://drive.google.com/file/d/1o88iS12Lv214xWJ-l9PU6mk42R7Y0jWn/view?usp=sharing)   | [dict](https://drive.google.com/file/d/1J7hkjJjSoHNXUPO7A3O5XGCUnBTj7h9p/view?usp=sharing) | [hugging face](https://huggingface.co/lgris/bp_400h_xlsr2_300M)  |
 
 #### Checkpoints of non-filtered BP Dataset (early version of the BP dataset)
 
@@ -66,6 +67,7 @@ We provide other Wav2vec checkpoints. These models were trained using all the av
 | Model                          | CETUC | CV    | LaPS  | MLS   | SID   | TEDx  | VF    | AVG   |
 |--------------------------------|-------|-------|-------|-------|-------|-------|-------|-------|
 | __bp\_400__                    | 0.052 | 0.140 | 0.074 | 0.117 | 0.121 | 0.245 | 0.118 | 0.124 |
+| __bp\_400_xls-r-300M__         | 0.048 | 0.123 | 0.068 | 0.111 | 0.084 | 0.207 | 0.095 | 0.105 |
 | bp\_500                        | 0.052 | 0.137 | 0.032 | 0.118 | 0.095 | 0.236 | 0.082*| 0.112 |
 | bp\_500-base10k_voxpopuli      | 0.120 | 0.249 | 0.039 | 0.227 | 0.169 | 0.349 | 0.116*| 0.181 |
 | bp\_500-base100k_voxpopuli     | 0.074 | 0.174 | 0.032 | 0.182 | 0.181 | 0.349 | 0.111*| 0.157 |
