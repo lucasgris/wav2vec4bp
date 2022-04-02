@@ -2,6 +2,8 @@
 
 Paper: https://arxiv.org/abs/2107.11414
 
+![Poster](poster.png)
+
 ## Description 
 
 This repository contains code and fine-tuned Wav2vec ASR checkpoints for Brazilian Portuguese, including some useful scripts to download and preprocess transcribed data. 
