@@ -28,7 +28,7 @@ class Lapsbm(Corpus):
 
     def _create_sets(self, test_speakers_perc=0.1):
         speakers = list(filter(lambda d: osp.isdir(osp.join(self.extracted_dir, DEFAULT_SET_NAME, d)),
-                               os.listdir(osp.join(self.extracted_dir, DEFAULT_SET_NAME))))
+                               os.listdir(self.extracted_dir)))
         male_speakers = list(filter(lambda s: s.split('-')[-1].startswith('M'), speakers))
         female_speakers = list(filter(lambda s: s.split('-')[-1].startswith('F'), speakers))
 
